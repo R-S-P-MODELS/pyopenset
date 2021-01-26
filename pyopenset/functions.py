@@ -50,13 +50,14 @@ class ModuleNormalization(Layer):
 def AddNewClass(model1,X):
   import numpy as np
   from keras.models import Model
+  from keras.layers import Dense
   Weights=model1.layers[-1].get_weights()
   ClassWeights=Weights[0]
   model=Model(model1.input,model1.layers[-2].output)
   Embeddings=model.predict(X)
   ProtValue=np.mean(Embeddings,axis=0)
   ProtValue=ProtValue/np.sqrt(np.sum(ProtValue**2) )
-  print(ClassWeights.shape)
+  #print(ClassWeights.shape)
   NewWeights=np.zeros(shape=(ClassWeights.shape[0],ClassWeights.shape[1]+1))
   NewWeights[:,0:(ClassWeights.shape[1]) ]=ClassWeights
   NewWeights[:,NewWeights.shape[1]-1]=ProtValue
