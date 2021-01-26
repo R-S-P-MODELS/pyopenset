@@ -1,6 +1,6 @@
 # pyopenset
 
-Pyopenset is a package that implements the meyhodology described in the paper:
+Pyopenset is a package that implements the methodology described in the paper:
 
 It allows a easy and intuitive way to add novel classes to a pretrained model without requiring further optimization, New classes will always be added after the last.
 
