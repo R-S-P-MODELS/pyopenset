@@ -1,6 +1,6 @@
 # pyopenset
 
-Pyopenset is a package that implements the methodology described in the paper: Hyperspherical embedding for novel class classification 
+Pyopenset is a package that implements the methodology described in the paper: Hyperspherical embedding for novel class classification: https://arxiv.org/abs/2102.03243
 
 It allows a easy and intuitive way to add novel classes to a pretrained model without requiring further optimization, new classes will always be added after the last.
 
